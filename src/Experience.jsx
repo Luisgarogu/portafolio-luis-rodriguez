@@ -3,13 +3,12 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
 
-const boxRef = useRef();
-
-useFrame((state, delta) => {
-    boxRef.current.rotation.x += 1 * delta;
-});
-
 const Experience = ({ title, info }) => {
+    const boxRef = useRef();
+
+    useFrame((state, delta) => {
+        boxRef.current.rotation.x += 1 * delta;
+    });
     return (
         <>
             <OrbitControls makeDefault />
